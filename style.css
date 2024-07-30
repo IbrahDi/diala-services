@@ -1,0 +1,53 @@
+@font-face {
+	font-family:'INGAME';
+	src: url('INGAME.ttf');
+}
+body{
+	background-color: rgb(221,252,218);
+	background-image: url("tn_IMG-20230823-WA0011.jpg");
+	background-repeat: no-repeat;
+	background-position: top right;
+
+	}
+
+/*creation de couleur pour chaque partie du site*/
+.rev
+{
+	color: blue;
+	font-family: 'INGAME' "Arial Black", Arial, Impact, Verdana, Serif;
+}
+h1{
+	font-size: 2em;
+	color: rgb(0,128,64);
+	font-family: INGAME "Arial Black", Arial, Impact, Verdana, Serif;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    text-shadow:2px 2px 2px black;
+
+}
+h2{
+
+	font-size: x-large;
+    font-style: bold;
+    text-align: center;
+}
+p{
+	font-family: "Times New Roman", Arial, Impact, Verdana, Serif;
+	text-align: justify;
+}
+h3
+{
+	font-size: 1.3em;
+	font-family: Arial, Impact, Verdana, Serif;
+font-style: italic;
+border-radius: 50px / 10px rgb(17,91,39);
+box-shadow: 2px 1px 16px 1px rgb(17,91,39);
+}
+em, .info{ color: red;
+font-family: "Arial Black", Arial, Impact, Verdana, Serif; }
+a[title]
+{
+	color:red;
+	font-family: "Arial Black", Arial, Impact, Verdana, Serif;
+}
