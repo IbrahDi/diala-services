@@ -35,14 +35,18 @@ h2{
 p{
 	font-family: "Times New Roman", Arial, Impact, Verdana, Serif;
 	text-align: justify;
+	min-width: 250px;
+	width: 50%;
+	text-align: justify;
+	border:  1px solid black;
+	padding: 15px;
+	margin: 150px;
 }
 h3
 {
 	font-size: 1.3em;
 	font-family: Arial, Impact, Verdana, Serif;
 font-style: italic;
-border-radius: 50px / 10px rgb(17,91,39);
-box-shadow: 2px 1px 16px 1px rgb(17,91,39);
 }
 em, .info{ color: red;
 font-family: "Arial Black", Arial, Impact, Verdana, Serif; }
@@ -50,4 +54,16 @@ a[title]
 {
 	color:red;
 	font-family: "Arial Black", Arial, Impact, Verdana, Serif;
+}
+a{
+	text-decoration: none;
+	color: blue;
+	font-style: italic;
+}
+a:hover {
+	text-decoration: underline;
+	color: rgb(241,177,196);
+}
+a:focus {
+	background-color: rgb(46,49,90);
 }
