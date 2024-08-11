@@ -9,7 +9,188 @@ body{@font-face {
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Boul';
+	font-family: 'Boul';/* Définir les polices personnalisées */
+@font-face {
+    font-family: 'INGAME';
+    src: url('pol/INGAME.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Boul';
+    src: url('pol/Boul.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MilestoneBrush';
+    src: url('pol/MilestoneBrush.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rostack';
+    src: url('pol/Rostack.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Style global du corps de la page */
+body {
+    background-color: #DDFCD2; /* Couleur de fond douce */
+    background-image: url("tn_IMG-20230823-WA0011.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Couleur de texte par défaut */
+    line-height: 1.6;
+}
+
+/* Conteneur principal */
+#bloc_page {
+    width: 90%;
+    margin: auto;
+}
+
+/* Style de l'en-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #008C46; /* Ligne de séparation subtile */
+}
+
+/* Logo et titre */
+header #logo img {
+    max-width: 150px; /* Ajuster la taille du logo */
+}
+header h1 {
+    font-family: 'Boul', Arial, sans-serif;
+    color: #20431B;
+    text-transform: uppercase;
+    margin: 0;
+}
+header h2 {
+    font-family: 'Boul', Arial, sans-serif;
+    color: #008C46;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Style de la navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    margin-right: 20px;
+}
+nav a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #008C46;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Rostack', Arial, sans-serif;
+}
+nav a:hover {
+    background-color: #005A2C;
+}
+
+/* Style de la bannière */
+#banniere_image {
+    margin: 20px 0;
+    height: 300px;
+    border-radius: 10px;
+    background: url('R3.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+#banniere_description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+/* Style des sections */
+section {
+    margin-bottom: 40px;
+}
+section h1, section h2, section h3 {
+    color: #20431B;
+    font-family: 'Boul', Arial, sans-serif;
+}
+section p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+/* Style des boutons */
+.bouton_rouge {
+    display: inline-block;
+    background-color: #D92626;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+.bouton_rouge:hover {
+    background-color: #A81A1A;
+}
+
+/* Style du pied de page */
+footer {
+    background-color: #20431B;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+footer p, footer ul {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+}
+footer h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+footer a {
+    color: #D92626;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #A81A1A;
+}
+
+/* Style des images et figures */
+aside figure {
+    margin: 0;
+    text-align: center;
+}
+aside img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+aside figcaption {
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
 	src: url('pol/Boul.otf');
 	font-weight: normal;
 	font-style: normal;
