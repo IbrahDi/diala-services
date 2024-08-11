@@ -1,15 +1,4 @@
-@font-face {
-	font-family:'INGAME';
-	src: url('INGAME.ttf');
-}
-body{@font-face {
-	font-family:'INGAME';
-	src: url('pol/INGAME.ttf');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Boul';/* Définir les polices personnalisées */
+/* Définir les polices personnalisées */
 @font-face {
     font-family: 'INGAME';
     src: url('pol/INGAME.ttf');
@@ -44,12 +33,15 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333; /* Couleur de texte par défaut */
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 /* Conteneur principal */
 #bloc_page {
     width: 90%;
     margin: auto;
+    max-width: 1200px;
 }
 
 /* Style de l'en-tête */
@@ -59,6 +51,7 @@ header {
     align-items: center;
     padding: 20px 0;
     border-bottom: 2px solid #008C46; /* Ligne de séparation subtile */
+    flex-wrap: wrap; /* Permet à l'en-tête de s'adapter sur de petits écrans */
 }
 
 /* Logo et titre */
@@ -70,6 +63,7 @@ header h1 {
     color: #20431B;
     text-transform: uppercase;
     margin: 0;
+    font-size: 2em; /* Ajustement pour petits écrans */
 }
 header h2 {
     font-family: 'Boul', Arial, sans-serif;
@@ -84,6 +78,8 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrer les éléments sur petits écrans */
 }
 nav li {
     margin-right: 20px;
@@ -191,308 +187,77 @@ aside figcaption {
     font-size: 0.9em;
     margin-top: 10px;
 }
-	src: url('pol/Boul.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'MilestoneBrush';
-	src: url('pol/MilestoneBrush.otf');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Rostack';
-	src: url('pol/Rostack.otf');
-	font-weight: normal;
-	font-style: normal;
+
+/* Media Queries pour adaptabilité mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #banniere_image {
+        height: 200px;
+    }
+
+    #banniere_description {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .bouton_rouge {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    footer h5 {
+        font-size: 1em;
+    }
 }
 
-body{
-	background-color: rgb(221,252,218);
-	background-image: url("tn_IMG-20230823-WA0011.jpg");
-	background-repeat: no-repeat;
-	background-position: top right;
-	
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
 
-	}
-#bloc_page{
-	width: 90%;
-	margin: auto;
-}
-/*creation de couleur pour chaque partie du site*/
-.rev
-{
-	color: blue;
-	font-family:'INGAME', "Arial Black", Arial, Impact, Verdana, Serif;
-}
-header{
-	margin: auto; /*les marges seront centres*/
-	justify-content: space-between;
-	align-items: flex-end;
-	font-size: 1.5em; /*Taille de l'ecriture.*/
-}
-nav u1 {
-	list-style-type: none;
-	display: flex;
-}
-nav li {
-	margin-right: 13px;
-}
-nav a {
-    display: inline-block; /* Permet de définir la taille et les marges comme pour un bloc */
-    font-size: 1.5em;
-    color: white; /* Couleur du texte */
-    background-color: rgb(0,140,70); /* Couleur de fond du bouton */
-    padding: 10px 20px; /* Espacement interne pour agrandir le bouton */
-    text-decoration: none; /* Supprime la sous-ligne */
-    border: none; /* Supprime la bordure par défaut */
-    border-radius: 10px; /* Coins arrondis */
-    margin: auto;
-    transition: background-color 0.3s ease; /* Transition pour un effet au survol */
-    font-family:  'Rostack','MilestoneBrush', "Arial Black", Arial, Impact, Verdana, Serif;
+    nav a {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
 
-}
+    #banniere_image {
+        height: 150px;
+    }
 
-nav a:hover {
-    background-color: darkred; /* Change la couleur de fond au survol */
-}
+    #banniere_description {
+        font-size: 0.9em;
+        padding: 8px;
+    }
 
-nav a:hover {
-	color: solid black;
-	
-}
-a/*Definir l'apparence general des liens.*/
-{
-	text-decoration: none; /*Supprime la decoration par defeut des liens.*/
-	color: blue; /*Change la couleur du texte lien en bleu.*/
-	font-style: italic; /*Applique un style italic au lien.*/
-}
-a:hover /*S'applique lorsque la souris passe sur le lien.*/ 
-{
-	text-decoration: underline; /*Ajoute un soulignement lors du survol du lien.*/
-	color: rgb(241,177,196); /*Change la couleur du lien lors du survol.*/
-}
-a:focus /*S'applique lorsque le lien a ete navigue.*/
-{
-	color: rgb(180,118,231);
-}
-/*Banniere*/
-#banniere_image{
-	margin-top: 14px;
-	height: 200px;
-	border-radius: 6px;
-	background: url('R3.jpg') no-repeat;
-	position: relative;
-	box-shadow: 0px 4px 4px #1c1a19;
-	margin-bottom: 25px;
-}
-#banniere_description
-{
- position: absolute;
- bottom: 0;
- border-radius: 0px 0px 5px 5px;
- width: 99.5%;
- height: 33px;
- padding-top: 15px;
- padding-left: 4px;
- background-color: rgba(24,24,24,0.8);
- color: white;
- font-size: 0.8em;
-}
-.bouton_rouge
-{
- height: 25px;
- position: absolute;
- right: 5px;
- bottom: 5px;
- background: url('images/fond_degraderouge.png') repeat-x;
- border: 1px solid #760001;
- border-radius: 5px;
- font-size: 1.2em;
- text-align: center;
- padding: 3px 8px 0px 8px;
- color: white;
- text-decoration: none;
-}
-.bouton_rouge img
-{
- border: 0;
-}
-h1{
-	font-size: 3em; /*Taille de l'ecriture.*/
-	color: rgb(32,67,27); /*Couleur du caractere*/
-    font-weight: bold;
-    text-decoration: underline;
-    text-align: center;
-    text-shadow:2px 2px 2px green;
-    font-family:  'Boul',MilestoneBrush, "Arial Black", Arial, Impact, Verdana, Serif;
-    text-transform: uppercase;
-    margin: auto; /*les marges seront centres*/
+    .bouton_rouge {
+        padding: 10px;
+        font-size: 1em;
+    }
 
-}
-h2{
-font-family:  'Boul', "Arial Black", Arial, Impact, Verdana, Serif;
-color: green;
-	font-size: x-large;
-    font-style: bold;
-    text-align: center;
-    text-transform: uppercase;/*transformer le texte en majuscule*/
-}
-p{
-	font-family: "Times New Roman", Arial, Impact, Verdana, Serif;
-	text-align: justify;
-	min-width: 250px;
-	width: 70%;
-	text-align: justify;
-	border:  1px solid black;
-	padding: 15px;
-	margin: auto; /*les marges seront centres*/
-	margin-bottom: 10px;/*mettre une distance de 10 px entre les marges exterieures bas*/
-    overfow: auto; /*le navigateur mettra des barre de defilement si le texte depasse le cadre*/
-
-}
-h3
-{
-	font-size: 1.3em;
-	font-family: Arial, Impact, Verdana, Serif;
-font-style: italic;
-}
-em, .info{ color: red;
-font-family: "Arial Black", Arial, Impact, Verdana, Serif; }
-	#conteneur /*presentation des elements*/ 
-	{
-display: flex; /*Mise en page flexible des elements du conteneur*/
-	 /*mettre des espaces entre les elements et les bordures de la page*/
-}
-.element:ntf-child(1)
-{
-	align-items: flex-start;
-}
-section {
-	
-	margin-bottom: 20px;
-}
-article, aside {
-	text-align: justify;
-}
-article {
-	margin-right: 20px;
-	flex: 3;
-}
-article p {
-	font-style: 0.9em;
-}
-aside {
-	flex: 2;
-	position: relative;
-	background-color: #706b69;
-	box-shadow: 0px 2px 5px #1c1a19;
-	border-radius: 6px;
-	padding: 10px;
-	color: white;
-	font-style: 0.9em;
-}
-aside img {
-	margin-right: 4px;
-}
-footer {
-	
-	padding-top: 25px;
-}
-footer p, footer ul {
-	font-size:0.8em;
-}
-footer h1{
-	font-size: 1.1em;
-
-}
-#mes_photos {
-	display: flex;
-	width: 30%
-}
-#Mes_sponsors {
-	display: flex;
-	width: 32%;
-}
-#mes_photo img {
-	border: 1px solid #181818;
-	margin-right: 2px;
-}
-#liste {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 0;
-}
-#Mes_sponsors ul{
-	list-style-image: url('images/ico_liensexterne.jpg');
-	padding-left: 2px;
-}
-#Mes_sponsors a {
-	text-decoration: none;
-	color: #760001;
-}
-	background-color: rgb(221,252,218);
-	background-image: url("tn_IMG-20230823-WA0011.jpg");
-	background-repeat: no-repeat;
-	background-position: top right;
-
-	}
-
-/*creation de couleur pour chaque partie du site*/
-.rev
-{
-	color: blue;
-	font-family: 'INGAME' "Arial Black", Arial, Impact, Verdana, Serif;
-}
-h1{
-	font-size: 2em;
-	color: rgb(0,128,64);
-	font-family: INGAME "Arial Black", Arial, Impact, Verdana, Serif;
-    font-weight: bold;
-    text-decoration: underline;
-    text-align: center;
-    text-shadow:2px 2px 2px black;
-
-}
-h2{
-
-	font-size: x-large;
-    font-style: bold;
-    text-align: center;
-}
-p{
-	font-family: "Times New Roman", Arial, Impact, Verdana, Serif;
-	text-align: justify;
-	min-width: 250px;
-	width: 50%;
-	text-align: justify;
-	border:  1px solid black;
-	padding: 15px;
-	margin: 150px;
-}
-h3
-{
-	font-size: 1.3em;
-	font-family: Arial, Impact, Verdana, Serif;
-font-style: italic;
-}
-em, .info{ color: red;
-font-family: "Arial Black", Arial, Impact, Verdana, Serif; }
-a[title]
-{
-	color:red;
-	font-family: "Arial Black", Arial, Impact, Verdana, Serif;
-}
-a{
-	text-decoration: none;
-	color: blue;
-	font-style: italic;
-}
-a:hover {
-	text-decoration: underline;
-	color: rgb(241,177,196);
-}
-a:focus {
-	background-color: rgb(46,49,90);
+    footer h5 {
+        font-size: 0.9em;
+    }
 }
